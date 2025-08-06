@@ -10,9 +10,29 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 
 app.use(express.json());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://community-platform-two.vercel.app"
+];
+
 app.use(cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:3000',
-    credentials: true
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, curl)
+    if (!origin) return callback(null, true);
+
+    // Allow production + localhost
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    // Allow any *.vercel.app preview URL
+    if (/^https:\/\/community-platform-.*\.vercel\.app$/.test(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error("CORS not allowed by server"));
+  },
+  credentials: true
 }));
 
 app.use('/api/auth', authRoutes);
