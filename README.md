@@ -247,12 +247,7 @@ The application is fully responsive and works on:
 - Lazy loading components
 - Compressed assets
 
-## 📞 Contact
 
-For any questions about this project:
-- **GitHub:** [Your GitHub Profile]
-- **Email:** [Your Email]
-- **LinkedIn:** [Your LinkedIn Profile]
 
 ## 📄 License
 
