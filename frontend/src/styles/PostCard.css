@@ -1,0 +1,266 @@
+/* PostCard.css */
+.post-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  padding: 16px 20px 12px;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar img,
+.author-avatar .avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-avatar .avatar-placeholder {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a66c2;
+  color: white;
+  font-weight: bold;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.author-name:hover {
+  color: #0a66c2;
+}
+
+.post-time {
+  color: #666;
+  font-size: 13px;
+}
+
+.post-content {
+  padding: 0 20px 16px;
+}
+
+.post-content p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-top: 1px solid #e1e5e9;
+  border-bottom: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+}
+
+.post-stats span {
+  color: #666;
+  font-size: 13px;
+}
+
+.post-actions {
+  display: flex;
+  padding: 8px 12px;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #f1f5f9;
+  color: #333;
+}
+
+.action-btn.liked {
+  color: #e74c3c;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comments-section {
+  border-top: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+}
+
+.add-comment {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.comment-avatar img,
+.comment-avatar .avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-avatar .avatar-placeholder {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a66c2;
+  color: white;
+  font-weight: bold;
+}
+
+.comment-input {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.comment-input input:focus {
+  border-color: #0a66c2;
+}
+
+.comment-submit {
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comment-submit:hover:not(:disabled) {
+  background-color: #004182;
+}
+
+.comment-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comments-list {
+  padding: 0 20px 16px;
+}
+
+.comment {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+}
+
+.comment-content {
+  flex: 1;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 16px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.comment-author {
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .post-card {
+    margin: 0 -4px;
+    border-radius: 8px;
+  }
+
+  .post-header,
+  .post-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .post-stats,
+  .add-comment,
+  .comments-list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .action-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
