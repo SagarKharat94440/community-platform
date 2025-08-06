@@ -53,11 +53,26 @@ This is a comprehensive Mini LinkedIn-like Community Platform built with the MER
 
 ```
 linkedin-clone-ciaan/
-├── backend/
-│   ├── server.js              # Express server with all routes
-│   ├── package.json           # Backend dependencies
-│   ├── .env                   # Environment variables
-│   └── .gitignore             # Git ignore file
+├──backend/
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    └── src/
+        ├── app.js                 # Main Express app configuration
+        ├── server.js              # Server entry point
+        ├── controllers/
+        │   ├── authController.js  # Authentication logic (login, register)
+        │   ├── postController.js  # Post operations (create, get, like, comment)
+        │   └── userController.js  # User operations (profile, update)
+        ├── middleware/
+        │   └── authMiddleware.js  # JWT authentication middleware
+        ├── models/
+        │   ├── post.js           # Post data model
+        │   └── user.js           # User data model
+        └── routes/
+            ├── authRoutes.js      # Authentication endpoints
+            ├── postRoutes.js      # Post-related endpoints
+            └── userRoutes.js      # User-related endpoints
 ├── frontend/
 │   ├── public/
 │   │   └── index.html         # HTML template
