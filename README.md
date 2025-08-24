@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 
-This is a comprehensive Mini LinkedIn-like Community Platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for the CIAAN Cyber Tech Pvt Ltd Full Stack Development Internship application.
+This is a comprehensive Mini LinkedIn-like Community Platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js) .
 
 ## ✅ Features Implemented
 
@@ -249,10 +249,4 @@ The application is fully responsive and works on:
 
 
 
-## 📄 License
 
-This project is created for educational purposes as part of the CIAAN Cyber Tech Pvt Ltd internship application.
-
----
-
-**Built with ❤️ using the MERN Stack**
